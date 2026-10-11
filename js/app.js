@@ -148,7 +148,11 @@
     }
     syncLabel();
     button.addEventListener("click", function () {
-      var current = document.documentElement.getAttribute("data-theme") || "dark";
+      var current =
+        document.documentElement.getAttribute("data-theme") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light");
       var next = current === "dark" ? "light" : "dark";
       document.documentElement.setAttribute("data-theme", next);
       localStorage.setItem(STORAGE_KEY, next);

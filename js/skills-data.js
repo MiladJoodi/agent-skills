@@ -4,28 +4,22 @@
 window.SKILLS_CATALOG = {
   "categories": [
     {
-      "id": "writing",
-      "name": "Writing",
-      "nameFa": "نوشتن",
-      "description": "لحن و متن فارسی برای محصول و محتوا"
-    },
-    {
       "id": "web",
       "name": "Web",
       "nameFa": "وب",
-      "description": "پیش‌نمایش لینک، واکنش‌گرایی، دسترس‌پذیری، تعامل و نمودار فارسی"
+      "description": "پیش‌نمایش لینک، واکنش‌گرایی، دسترس‌پذیری، تعامل و الگوهای UI"
     },
     {
       "id": "seo",
       "name": "SEO",
       "nameFa": "سئو",
-      "description": "سئوی فنی و محتوایی، متادیتا و ممیزی کیفیت برای جستجو"
+      "description": "سئوی فنی عمومی، متادیتا و ممیزی کیفیت برای جستجو"
     },
     {
       "id": "persian-product",
       "name": "Persian Product",
       "nameFa": "محصول فارسی",
-      "description": "RTL، تاریخ شمسی، اعتبارسنجی و تایپوگرافی"
+      "description": "متن فارسی، RTL، تاریخ شمسی، اعتبارسنجی، تایپوگرافی، سئوی فارسی و سرویس‌های ایرانی"
     },
     {
       "id": "ui-library",
@@ -40,16 +34,10 @@ window.SKILLS_CATALOG = {
       "description": "مهارت‌های Agent، MCP و کیفیت کد با AI"
     },
     {
-      "id": "integrations",
-      "name": "Integrations",
-      "nameFa": "یکپارچه‌سازی",
-      "description": "پرداخت، آپلود و سرویس‌های ایرانی"
-    },
-    {
       "id": "security",
       "name": "Security",
       "nameFa": "امنیت",
-      "description": "امنیت فرانت‌اند، XSS، CSP، احراز هویت و پرداخت امن"
+      "description": "امنیت فرانت‌اند و بک‌اند، XSS، CSP، API، احراز هویت و پرداخت امن"
     }
   ],
   "skills": [
@@ -58,7 +46,7 @@ window.SKILLS_CATALOG = {
       "name": "Persian Conversational",
       "nameFa": "نوشتن فارسی محاوره‌ای",
       "slug": "persian-conversational",
-      "category": "writing",
+      "category": "persian-product",
       "tags": [
         "نوشتن",
         "محاوره",
@@ -88,7 +76,7 @@ window.SKILLS_CATALOG = {
       "name": "Persian Formal",
       "nameFa": "نوشتن فارسی رسمی",
       "slug": "persian-formal",
-      "category": "writing",
+      "category": "persian-product",
       "tags": [
         "نوشتن",
         "رسمی",
@@ -118,7 +106,7 @@ window.SKILLS_CATALOG = {
       "name": "Persian UI Copy",
       "nameFa": "نوشتن متن رابط کاربری",
       "slug": "persian-ui-copy",
-      "category": "writing",
+      "category": "persian-product",
       "tags": [
         "نوشتن",
         "UI",
@@ -238,7 +226,7 @@ window.SKILLS_CATALOG = {
       "name": "Persian SEO",
       "nameFa": "سئوی فارسی",
       "slug": "persian-seo",
-      "category": "seo",
+      "category": "persian-product",
       "tags": [
         "سئو",
         "متادیتا",
@@ -401,11 +389,48 @@ window.SKILLS_CATALOG = {
       "bundle": "frontend-security.zip"
     },
     {
+      "id": "backend-security",
+      "name": "Backend Security",
+      "nameFa": "امنیت بک‌اند",
+      "slug": "backend-security",
+      "category": "security",
+      "tags": [
+        "security",
+        "API",
+        "SQL injection",
+        "SSRF",
+        "JWT",
+        "OAuth",
+        "BOLA",
+        "webhooks"
+      ],
+      "summary": "Secure-by-default backend guidance: authn/authz, injection, SSRF, JWT/OAuth, uploads, webhooks, races, and API hardening.",
+      "description": "Secure-by-default guidance for writing, reviewing, and fixing backend application code—HTTP/REST/GraphQL APIs, authentication, authorization (BOLA/IDOR), sessions and JWT, OAuth/OIDC, password hashing, injection, SSRF, mass assignment, rate limiting, file uploads, secrets and crypto, webhooks, race conditions, and dependency hygiene. Use for security reviews or when building login, multi-tenant data access, outbound fetches, webhooks, or payment endpoints.",
+      "whenToUse": "Security review of backend/API code · SQL/NoSQL injection or SSRF · Auth, JWT, OAuth, sessions · BOLA/IDOR and multi-tenant access · Webhooks, uploads, and race-prone money flows",
+      "useCases": [
+        "Security review of backend/API code",
+        "SQL/NoSQL injection or SSRF",
+        "Auth, JWT, OAuth, sessions",
+        "BOLA/IDOR and multi-tenant access",
+        "Webhooks, uploads, and race-prone money flows"
+      ],
+      "installPath": ".cursor/skills/backend-security/SKILL.md",
+      "installCommand": "",
+      "example": "Loads an order only with tenant and user from the verified session—never findById(req.params.id) alone.",
+      "featured": true,
+      "source": "miladjoodi",
+      "sourceName": "Milad Joodi",
+      "sourceUrl": "https://github.com/MiladJoodi/skills/tree/main/skills/backend-security",
+      "sourceRepo": "https://github.com/MiladJoodi/skills/tree/main/skills/backend-security",
+      "filesPath": "skills/backend-security/",
+      "bundle": "backend-security.zip"
+    },
+    {
       "id": "agents-md-persian",
       "name": "Agents MD Persian",
       "nameFa": "قوانین فارسی برای پروژه",
       "slug": "agents-md-persian",
-      "category": "ai",
+      "category": "persian-product",
       "tags": [
         "راهنما",
         "Agent",
@@ -676,7 +701,7 @@ window.SKILLS_CATALOG = {
       "name": "Parspack S3 Upload",
       "nameFa": "آپلود تصویر به پارس‌پک",
       "slug": "parspack-s3-upload",
-      "category": "integrations",
+      "category": "persian-product",
       "tags": [
         "راهنما",
         "آپلود",
@@ -705,7 +730,7 @@ window.SKILLS_CATALOG = {
       "name": "Zarinpal Payment",
       "nameFa": "پرداخت آنلاین با زرین‌پال",
       "slug": "zarinpal-payment",
-      "category": "integrations",
+      "category": "persian-product",
       "tags": [
         "راهنما",
         "پرداخت",
@@ -769,7 +794,7 @@ window.SKILLS_CATALOG = {
       "name": "RTL Charts",
       "nameFa": "نمودار فارسی و راست‌چین",
       "slug": "rtl-data-visualization",
-      "category": "web",
+      "category": "persian-product",
       "tags": [
         "rtl",
         "recharts",
