@@ -18,6 +18,13 @@
     return pageHref("skills/" + slug + "/SKILL.md");
   }
 
+  function skillBundleHref(skill) {
+    if (!skill || !skill.bundle) return "";
+    var slug = skill.slug || skill.id;
+    var name = String(skill.bundle).replace(/^\/+/, "");
+    return pageHref("skills/" + slug + "/" + name);
+  }
+
   function loadCatalog() {
     var data = window.SKILLS_CATALOG;
     if (!data || !Array.isArray(data.skills) || !Array.isArray(data.categories)) {
@@ -99,10 +106,33 @@
     });
   }
 
-  function sourceLabel(skill) {
-    if (skill.sourceName) return skill.sourceName;
-    if (skill.source === "farsiui") return "FarsiUI";
-    return skill.source || "Unknown";
+  var FARSIUI_SKILLS_URL = "https://farsiui.ir/skills";
+
+  function skillSource(skill) {
+    return {
+      label: skill.sourceName || "FarsiUI",
+      url: skill.sourceUrl || FARSIUI_SKILLS_URL,
+    };
+  }
+
+  function renderDrawerSource(source, category) {
+    if (!drawerEls.sub) return;
+    var label = source.label;
+    var url = source.url || "";
+    drawerEls.sub.innerHTML =
+      (url
+        ? '<a class="source-verified" href="' +
+          escapeHtml(url) +
+          '" target="_blank" rel="noopener noreferrer">'
+        : '<span class="source-verified">') +
+      VERIFY_ICON_SVG +
+      "<span>" +
+      escapeHtml(label) +
+      "</span>" +
+      (url ? "</a>" : "</span>") +
+      '<span class="drawer-cat">' +
+      escapeHtml(category) +
+      "</span>";
   }
 
   var STORAGE_KEY = "agent-skills-theme";
@@ -233,18 +263,25 @@
   }
 
   function downloadSkill(skill) {
-    var filename = "SKILL.md";
-    var href = skillMdHref(skill.slug || skill.id);
+    var slug = skill.slug || skill.id;
+    var bundleHref = skillBundleHref(skill);
+
+    if (bundleHref) {
+      downloadViaLink(bundleHref, skill.bundle || slug + ".zip");
+      return;
+    }
+
+    var href = skillMdHref(slug);
     var isHttp =
       window.location.protocol === "http:" || window.location.protocol === "https:";
 
     if (!isHttp) {
-      downloadViaLink(href, filename);
+      downloadViaLink(href, "SKILL.md");
       return;
     }
 
     loadSkillMarkdown(skill).then(function (text) {
-      triggerBlobDownload(text, filename);
+      triggerBlobDownload(text, "SKILL.md");
     });
   }
 
@@ -316,30 +353,18 @@
   function openDrawer(skill, catalog) {
     if (!drawerEls.root) return;
     var slug = skill.slug || skill.id;
-    var label = sourceLabel(skill);
-    var sourceUrl = skill.sourceUrl || "";
     var cat = categoryName(catalog, skill.category);
     var targets = installTargets(slug);
-    var activeId = "cursor";
+    var activeId = "claude";
 
     drawerEls.title.textContent = skill.name;
+    renderDrawerSource(skillSource(skill), cat);
 
-    if (drawerEls.sub) {
-      drawerEls.sub.innerHTML =
-        (sourceUrl
-          ? '<a class="source-verified" href="' +
-            escapeHtml(sourceUrl) +
-            '" target="_blank" rel="noopener noreferrer">'
-          : '<span class="source-verified">') +
-        VERIFY_ICON_SVG +
-        "<span>" +
-        escapeHtml(label) +
-        "</span>" +
-        (sourceUrl ? "</a>" : "</span>") +
-        '<span class="drawer-cat">' +
-        escapeHtml(cat) +
-        "</span>";
-    }
+    var hasBundle = Boolean(skill.bundle);
+    var downloadLabel = hasBundle ? "Download skill (.zip)" : "Download SKILL.md";
+    var installHelp = hasBundle
+      ? "Download the zip, extract it, and place the folder in one of the paths below:"
+      : "Download the file or create it yourself and place it in one of the paths below:";
 
     var tabsHtml = targets
       .map(function (target) {
@@ -359,6 +384,9 @@
 
     var panelsHtml = targets
       .map(function (target) {
+        var path = hasBundle
+          ? target.path.replace(/\/SKILL\.md$/, "/")
+          : target.path;
         return (
           '<div class="install-panel' +
           (target.id === activeId ? " is-active" : "") +
@@ -369,10 +397,10 @@
           ">" +
           '<div class="drawer-cmd-row">' +
           "<code>" +
-          escapeHtml(target.path) +
+          escapeHtml(path) +
           "</code>" +
           '<button type="button" class="copy-icon-btn" data-copy-path="' +
-          escapeHtml(target.path) +
+          escapeHtml(path) +
           '" aria-label="Copy path" title="Copy">' +
           COPY_ICON_SVG +
           "</button>" +
@@ -382,28 +410,36 @@
       })
       .join("");
 
+    var contentSection = hasBundle
+      ? ""
+      : '<section class="drawer-section drawer-content-section">' +
+        '<div class="drawer-content-head">' +
+        "<h3>SKILL.md</h3>" +
+        '<button type="button" class="copy-icon-btn" id="drawer-copy-md" aria-label="Copy content" title="Copy">' +
+        COPY_ICON_SVG +
+        "</button>" +
+        "</div>" +
+        '<textarea class="skill-md-box" id="drawer-md-content" readonly spellcheck="false" aria-label="SKILL.md content">Loading…</textarea>' +
+        "</section>";
+
     drawerEls.body.innerHTML =
       '<p class="drawer-summary">' +
       escapeHtml(skill.summary || "") +
       "</p>" +
-      '<button type="button" class="btn btn-primary btn-download" id="drawer-download">Download SKILL.md</button>' +
+      '<button type="button" class="btn btn-primary btn-download" id="drawer-download">' +
+      escapeHtml(downloadLabel) +
+      "</button>" +
       '<section class="drawer-section">' +
       "<h3>Manual install</h3>" +
-      '<p class="drawer-help">Download the file or create it yourself and place it in one of the paths below:</p>' +
+      '<p class="drawer-help">' +
+      escapeHtml(installHelp) +
+      "</p>" +
       '<div class="install-tabs" role="tablist">' +
       tabsHtml +
       "</div>" +
       panelsHtml +
       "</section>" +
-      '<section class="drawer-section drawer-content-section">' +
-      '<div class="drawer-content-head">' +
-      "<h3>SKILL.md</h3>" +
-      '<button type="button" class="copy-icon-btn" id="drawer-copy-md" aria-label="Copy content" title="Copy">' +
-      COPY_ICON_SVG +
-      "</button>" +
-      "</div>" +
-      '<textarea class="skill-md-box" id="drawer-md-content" readonly spellcheck="false" aria-label="SKILL.md content">Loading…</textarea>' +
-      "</section>";
+      contentSection;
 
     drawerEls.root.hidden = false;
     document.body.classList.add("drawer-open");
@@ -411,21 +447,21 @@
       drawerEls.root.classList.add("is-open");
     });
 
-    var mdBox = document.getElementById("drawer-md-content");
-    var mdContent = "";
-
-    loadSkillMarkdown(skill).then(function (text) {
-      mdContent = text;
-      if (mdBox) mdBox.value = text;
-    });
-
     document.getElementById("drawer-download").addEventListener("click", function () {
       downloadSkill(skill);
     });
 
-    document.getElementById("drawer-copy-md").addEventListener("click", function (event) {
-      copyText(mdContent || (mdBox && mdBox.value) || "", event.currentTarget);
-    });
+    if (!hasBundle) {
+      var mdBox = document.getElementById("drawer-md-content");
+      var mdContent = "";
+      loadSkillMarkdown(skill).then(function (text) {
+        mdContent = text;
+        if (mdBox) mdBox.value = text;
+      });
+      document.getElementById("drawer-copy-md").addEventListener("click", function (event) {
+        copyText(mdContent || (mdBox && mdBox.value) || "", event.currentTarget);
+      });
+    }
 
     drawerEls.body.querySelectorAll("[data-install-tab]").forEach(function (tab) {
       tab.addEventListener("click", function () {
@@ -490,6 +526,11 @@
       })
       .filter(function (group) {
         return group.skills.length > 0;
+      })
+      .sort(function (a, b) {
+        return a.category.name.localeCompare(b.category.name, "en", {
+          sensitivity: "base",
+        });
       });
   }
 

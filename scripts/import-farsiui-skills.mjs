@@ -104,9 +104,10 @@ const skills = skillsRaw.map((skill) => {
       "iran-validation",
     ].includes(skill.slug),
     source: "farsiui",
-    sourceName: "FarsiUI",
-    sourceUrl: `https://farsiui.ir/skills/${skill.slug}`,
-    sourceRepo: "https://github.com/MiladJoodi/FarsiUI",
+    // Upstream credit from FarsiUI `source` field; otherwise FarsiUI itself
+    sourceName: skill.source?.name || "FarsiUI",
+    sourceUrl: skill.source?.url || "https://farsiui.ir/skills",
+    sourceRepo: skill.source?.url || "https://github.com/MiladJoodi/FarsiUI",
     filesPath: `skills/${skill.slug}/`,
   };
 });

@@ -41,6 +41,12 @@
       "name": "Integrations",
       "nameFa": "یکپارچه‌سازی",
       "description": "پرداخت، آپلود و سرویس‌های ایرانی"
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "nameFa": "امنیت",
+      "description": "امنیت فرانت‌اند، XSS، CSP، احراز هویت و پرداخت امن"
     }
   ],
   "skills": [
@@ -69,10 +75,10 @@
       "example": "به‌جای «کاربر گرامی، خوش آمدید» می‌نویسد: «خوش اومدید! برای شروع پروفایل‌تون رو کامل کنید.»",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/persian-conversational",
-      "filesPath": "skills/persian-conversational/",
       "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceUrl": "https://farsiui.ir/skills",
+      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI",
+      "filesPath": "skills/persian-conversational/"
     },
     {
       "id": "persian-formal",
@@ -99,10 +105,10 @@
       "example": "به‌جای «شرکت ما همواره در تلاش می‌باشد» می‌نویسد: «از ۱۳۹۸ سایت فروشگاهی می‌سازیم.»",
       "featured": true,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/persian-formal",
-      "filesPath": "skills/persian-formal/",
       "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceUrl": "https://farsiui.ir/skills",
+      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI",
+      "filesPath": "skills/persian-formal/"
     },
     {
       "id": "persian-ui-copy",
@@ -129,10 +135,10 @@
       "example": "بعد از خرید، به‌جای یک پاراگراف طولانی فقط می‌نویسد: «سفارش ثبت شد.»",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/persian-ui-copy",
-      "filesPath": "skills/persian-ui-copy/",
       "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceUrl": "https://farsiui.ir/skills",
+      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI",
+      "filesPath": "skills/persian-ui-copy/"
     },
     {
       "id": "persian-rtl-ui",
@@ -159,10 +165,10 @@
       "example": "دکمه و قیمت از راست چیده می‌شوند و می‌نویسد «۱۲٬۰۰۰ تومان» و «خرید» — نه دلار و Buy now.",
       "featured": true,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/persian-rtl-ui",
-      "filesPath": "skills/persian-rtl-ui/",
       "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceUrl": "https://farsiui.ir/skills",
+      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI",
+      "filesPath": "skills/persian-rtl-ui/"
     },
     {
       "id": "jalali-calendar",
@@ -189,10 +195,10 @@
       "example": "روی فاکتور به‌جای ۲۰۲۶-۰۹-۲۰ می‌نویسد: ۲۹ شهریور ۱۴۰۵.",
       "featured": true,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/jalali-calendar",
-      "filesPath": "skills/jalali-calendar/",
       "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceUrl": "https://farsiui.ir/skills",
+      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI",
+      "filesPath": "skills/jalali-calendar/"
     },
     {
       "id": "iran-validation",
@@ -219,10 +225,10 @@
       "example": "اگر کسی ۰۹۱۲ بنویسد قبول می‌کند؛ اگر ۰۲۱ به‌جای موبایل بگذارد، خطا می‌دهد.",
       "featured": true,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/iran-validation",
-      "filesPath": "skills/iran-validation/",
       "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceUrl": "https://farsiui.ir/skills",
+      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI",
+      "filesPath": "skills/iran-validation/"
     },
     {
       "id": "persian-seo",
@@ -249,10 +255,10 @@
       "example": "عنوان صفحه را متناسب با محتوای فارسی می‌نویسد؛ مثلاً «کفش ورزشی مردانه | فروشگاه شما» به‌جای یک عنوان پیش‌فرض انگلیسی.",
       "featured": true,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/persian-seo",
-      "filesPath": "skills/persian-seo/",
       "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceUrl": "https://farsiui.ir/skills",
+      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI",
+      "filesPath": "skills/persian-seo/"
     },
     {
       "id": "seo",
@@ -281,10 +287,10 @@
       "example": "پیش از انتشار سایت، تنظیمات سئو و دسترسی موتورهای جست‌وجو را بررسی می‌کند و مشکلاتی را که ممکن است مانع ایندکس‌شدن صفحات شوند، مشخص می‌کند.",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/seo",
-      "filesPath": "skills/seo/",
-      "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceName": "seo",
+      "sourceUrl": "https://github.com/addyosmani/web-quality-skills/tree/main/skills/seo",
+      "sourceRepo": "https://github.com/addyosmani/web-quality-skills/tree/main/skills/seo",
+      "filesPath": "skills/seo/"
     },
     {
       "id": "web-quality-audit",
@@ -313,10 +319,10 @@
       "example": "صفحه را بررسی می‌کند، مشکلات واقعی را از حدس‌ها جدا می‌کند، اصلاحات لازم را انجام می‌دهد و دوباره نتیجه را می‌سنجد.",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/web-quality-audit",
-      "filesPath": "skills/web-quality-audit/",
-      "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceName": "web-quality-audit",
+      "sourceUrl": "https://github.com/addyosmani/web-quality-skills/tree/main/skills/web-quality-audit",
+      "sourceRepo": "https://github.com/addyosmani/web-quality-skills/tree/main/skills/web-quality-audit",
+      "filesPath": "skills/web-quality-audit/"
     },
     {
       "id": "open-graph-social-preview",
@@ -349,10 +355,47 @@
       "example": "اگر ImageResponse تصویر خراب می‌سازد، به‌جای آن یک og.png با اندازه ۱۲۰۰×۶۳۰ می‌گذارد و برای تست دوباره لینک را با ?v=2 باز می‌کند تا کش قدیمی X کنار برود.",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/open-graph-social-preview",
-      "filesPath": "skills/open-graph-social-preview/",
       "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceUrl": "https://farsiui.ir/skills/open-graph-social-preview",
+      "sourceRepo": "https://farsiui.ir/skills/open-graph-social-preview",
+      "filesPath": "skills/open-graph-social-preview/"
+    },
+    {
+      "id": "frontend-security",
+      "name": "Frontend Security",
+      "nameFa": "امنیت فرانت‌اند",
+      "slug": "frontend-security",
+      "category": "security",
+      "tags": [
+        "security",
+        "XSS",
+        "CSP",
+        "CSRF",
+        "Next.js",
+        "React",
+        "OTP",
+        "payment"
+      ],
+      "summary": "Secure-by-default guidance for React and Next.js App Router: XSS, CSP nonces, cookies/CSRF, uploads, third-party scripts, payment verify, and OTP/SMS login.",
+      "description": "Secure-by-default guidance for writing, reviewing, and fixing frontend code in React and Next.js (App Router)—XSS and unsafe HTML, CSP with nonces, security headers, CORS, cookies and token storage, CSRF, Server Actions, uploads, payment verification, and OTP/SMS login. Use for security reviews or when building auth, payments, or user-generated content.",
+      "whenToUse": "Security review of frontend code · XSS / dangerouslySetInnerHTML · CSP and security headers · Cookies, CSRF, and token storage · Payment callbacks and OTP login",
+      "useCases": [
+        "Security review of frontend code",
+        "XSS / dangerouslySetInnerHTML",
+        "CSP and security headers",
+        "Cookies, CSRF, and token storage",
+        "Payment callbacks and OTP login"
+      ],
+      "installPath": ".cursor/skills/frontend-security/SKILL.md",
+      "installCommand": "",
+      "example": "Marks a Zarinpal order paid only after server-side verify and amount match—not from Status=OK query params.",
+      "featured": true,
+      "source": "local",
+      "sourceName": "agent-skills",
+      "sourceUrl": "https://github.com/MiladJoodi/agent-skills",
+      "sourceRepo": "https://github.com/MiladJoodi/agent-skills",
+      "filesPath": "skills/frontend-security/",
+      "bundle": "frontend-security.zip"
     },
     {
       "id": "agents-md-persian",
@@ -378,10 +421,10 @@
       "example": "از اول پروژه می‌گوید دکمه را «خرید» بنویس، تاریخ را شمسی کن، صفحه را راست‌چین بچین.",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/agents-md-persian",
-      "filesPath": "skills/agents-md-persian/",
       "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceUrl": "https://farsiui.ir/skills",
+      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI",
+      "filesPath": "skills/agents-md-persian/"
     },
     {
       "id": "ui-craft-rules",
@@ -407,10 +450,10 @@
       "example": "اگر بگویید «قشنگش کن»، معمولاً گرادیان و سایه می‌ریزد؛ این مهارت می‌گوید فاصله و رنگ را مشخص نگه دار.",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/ui-craft-rules",
-      "filesPath": "skills/ui-craft-rules/",
       "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceUrl": "https://farsiui.ir/skills",
+      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI",
+      "filesPath": "skills/ui-craft-rules/"
     },
     {
       "id": "frontend-design",
@@ -437,10 +480,10 @@
       "example": "به‌جای اینکه برای یک فروشگاه اسباب‌بازی دوباره از همان ترکیب بنفش و سفید و کارت‌های تکراری استفاده کند، ظاهر صفحه را متناسب با فضای کودکانه و محصول طراحی می‌کند؛ از انتخاب رنگ و فونت گرفته تا چیدمان و جزئیات بصری.",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/frontend-design",
-      "filesPath": "skills/frontend-design/",
-      "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceName": "Anthropic",
+      "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/frontend-design",
+      "sourceRepo": "https://github.com/anthropics/skills/tree/main/skills/frontend-design",
+      "filesPath": "skills/frontend-design/"
     },
     {
       "id": "mcp-builder",
@@ -468,10 +511,10 @@
       "example": "به‌جای یک ابزار کلی مثل doStuff، ابزارهای مشخصی مثل list_orders یا create_order می‌سازید تا AI دقیقاً بداند هرکدام چه کاری انجام می‌دهند.",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/mcp-builder",
-      "filesPath": "skills/mcp-builder/",
-      "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceName": "Anthropic",
+      "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/mcp-builder",
+      "sourceRepo": "https://github.com/anthropics/skills/tree/main/skills/mcp-builder",
+      "filesPath": "skills/mcp-builder/"
     },
     {
       "id": "find-skills",
@@ -498,10 +541,10 @@
       "example": "اگر بپرسید «برای تست با Playwright مهارتی هست؟»، مهارت‌های مرتبط را پیدا می‌کند و دستور نصب گزینه مناسب را به شما می‌دهد.",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/find-skills",
-      "filesPath": "skills/find-skills/",
-      "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceName": "Vercel Labs",
+      "sourceUrl": "https://github.com/vercel-labs/skills/blob/main/skills/find-skills/SKILL.md",
+      "sourceRepo": "https://github.com/vercel-labs/skills/blob/main/skills/find-skills/SKILL.md",
+      "filesPath": "skills/find-skills/"
     },
     {
       "id": "vercel-react-best-practices",
@@ -529,10 +572,10 @@
       "example": "اگر دو درخواست به سرور به هم وابسته نباشند، به‌جای اینکه یکی تمام شود و بعد دیگری شروع شود، هر دو را هم‌زمان می‌فرستد تا نتیجه سریع‌تر آماده شود.",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/vercel-react-best-practices",
-      "filesPath": "skills/vercel-react-best-practices/",
-      "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceName": "Vercel Labs",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices",
+      "sourceRepo": "https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices",
+      "filesPath": "skills/vercel-react-best-practices/"
     },
     {
       "id": "improve-codebase-architecture",
@@ -560,10 +603,10 @@
       "example": "اگر یک سرویس بیش از حد شلوغ شده باشد، فقط نمی‌گوید «این بخش مشکل دارد»؛ مشخص می‌کند مشکل از کجاست، چه تغییراتی پیشنهاد می‌دهد و از شما می‌پرسد از کدام بخش شروع شود.",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/improve-codebase-architecture",
-      "filesPath": "skills/improve-codebase-architecture/",
-      "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceName": "Matt Pocock",
+      "sourceUrl": "https://github.com/mattpocock/skills/tree/main/skills/engineering/improve-codebase-architecture",
+      "sourceRepo": "https://github.com/mattpocock/skills/tree/main/skills/engineering/improve-codebase-architecture",
+      "filesPath": "skills/improve-codebase-architecture/"
     },
     {
       "id": "grill-me",
@@ -590,10 +633,10 @@
       "example": "به‌جای اینکه سریع بگوید «باشه، پیاده‌اش می‌کنم»، درباره محدوده کار، نیازمندی‌ها و چیزهایی که قرار نیست ساخته شوند سؤال می‌پرسد تا قبل از شروع، تکلیفشان مشخص شود.",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/grill-me",
-      "filesPath": "skills/grill-me/",
-      "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceName": "Matt Pocock",
+      "sourceUrl": "https://github.com/mattpocock/skills/tree/main/skills/productivity/grill-me",
+      "sourceRepo": "https://github.com/mattpocock/skills/tree/main/skills/productivity/grill-me",
+      "filesPath": "skills/grill-me/"
     },
     {
       "id": "persian-typography",
@@ -620,10 +663,10 @@
       "example": "تیتر فارسی را طوری می‌چیند که خط‌ها به هم نچسبند و راحت خوانده شوند.",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/persian-typography",
-      "filesPath": "skills/persian-typography/",
       "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceUrl": "https://farsiui.ir/skills",
+      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI",
+      "filesPath": "skills/persian-typography/"
     },
     {
       "id": "parspack-s3-upload",
@@ -649,10 +692,10 @@
       "example": "",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/parspack-s3-upload",
-      "filesPath": "skills/parspack-s3-upload/",
       "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceUrl": "https://farsiui.ir/skills",
+      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI",
+      "filesPath": "skills/parspack-s3-upload/"
     },
     {
       "id": "zarinpal-payment",
@@ -678,10 +721,10 @@
       "example": "",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/zarinpal-payment",
-      "filesPath": "skills/zarinpal-payment/",
       "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceUrl": "https://farsiui.ir/skills",
+      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI",
+      "filesPath": "skills/zarinpal-payment/"
     },
     {
       "id": "nextjs-multi-design-system",
@@ -713,10 +756,10 @@
       "example": "کوکی design-system را قبل از رندر صفحه می‌خواند و style-vega را روی body قرار می‌دهد تا iframe پیش‌نمایش هم همان ظاهر را نشان دهد.",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/nextjs-multi-design-system",
-      "filesPath": "skills/nextjs-multi-design-system/",
       "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceUrl": "https://farsiui.ir/skills/nextjs-multi-design-system",
+      "sourceRepo": "https://farsiui.ir/skills/nextjs-multi-design-system",
+      "filesPath": "skills/nextjs-multi-design-system/"
     },
     {
       "id": "rtl-data-visualization",
@@ -747,10 +790,10 @@
       "example": "محور X را با tickFormatter به فرمت fa-IR تبدیل می‌کند و Tooltip را داخل ChartContainer با dir=\"rtl\" درست تراز می‌کند.",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/rtl-data-visualization",
-      "filesPath": "skills/rtl-data-visualization/",
       "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceUrl": "https://farsiui.ir/skills/rtl-data-visualization",
+      "sourceRepo": "https://farsiui.ir/skills/rtl-data-visualization",
+      "filesPath": "skills/rtl-data-visualization/"
     },
     {
       "id": "component-registry-cli",
@@ -782,10 +825,10 @@
       "example": "آیتم registry:ui را با files و dependencies درست تعریف می‌کند و دستور add را بر اساس Aliasهای پروژه تولید می‌کند.",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/component-registry-cli",
-      "filesPath": "skills/component-registry-cli/",
       "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceUrl": "https://farsiui.ir/skills/component-registry-cli",
+      "sourceRepo": "https://farsiui.ir/skills/component-registry-cli",
+      "filesPath": "skills/component-registry-cli/"
     },
     {
       "id": "ui-library-mcp",
@@ -817,10 +860,10 @@
       "example": "ابزار search_items_in_registries را با Schema ساده و بدون $schema می‌سازد و برای list از یک Object خالی استفاده می‌کند تا Cursor بتواند ابزار را درست اجرا کند.",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/ui-library-mcp",
-      "filesPath": "skills/ui-library-mcp/",
       "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceUrl": "https://farsiui.ir/skills/ui-library-mcp",
+      "sourceRepo": "https://farsiui.ir/skills/ui-library-mcp",
+      "filesPath": "skills/ui-library-mcp/"
     },
     {
       "id": "responsive-design",
@@ -850,10 +893,10 @@
       "example": "به‌جای ساختن یک Layout دسکتاپ و کوچک کردن آن برای موبایل، ابتدا ساختار مناسب موبایل را در نظر می‌گیرد و سپس برای اندازه‌های بزرگ‌تر توسعه می‌دهد.",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/responsive-design",
-      "filesPath": "skills/responsive-design/",
-      "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceName": "wshobson/agents",
+      "sourceUrl": "https://github.com/wshobson/agents/tree/main/plugins/ui-design/skills/responsive-design",
+      "sourceRepo": "https://github.com/wshobson/agents/tree/main/plugins/ui-design/skills/responsive-design",
+      "filesPath": "skills/responsive-design/"
     },
     {
       "id": "accessibility-compliance",
@@ -883,10 +926,10 @@
       "example": "یک Dialog فقط با کلیک ماوس کار نمی‌کند؛ Focus را مدیریت می‌کند، با Escape بسته می‌شود و برای Screen Reader هم ساختار قابل فهمی دارد.",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/accessibility-compliance",
-      "filesPath": "skills/accessibility-compliance/",
-      "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceName": "wshobson/agents",
+      "sourceUrl": "https://github.com/wshobson/agents/tree/main/plugins/ui-design/skills/accessibility-compliance",
+      "sourceRepo": "https://github.com/wshobson/agents/tree/main/plugins/ui-design/skills/accessibility-compliance",
+      "filesPath": "skills/accessibility-compliance/"
     },
     {
       "id": "interaction-design",
@@ -916,10 +959,10 @@
       "example": "وقتی کاربر روی دکمه ارسال کلیک می‌کند، دکمه وارد حالت Loading می‌شود، از ارسال دوباره جلوگیری می‌کند و بعد نتیجه عملیات را به شکل واضح نمایش می‌دهد.",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/interaction-design",
-      "filesPath": "skills/interaction-design/",
-      "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceName": "wshobson/agents",
+      "sourceUrl": "https://github.com/wshobson/agents/tree/main/plugins/ui-design/skills/interaction-design",
+      "sourceRepo": "https://github.com/wshobson/agents/tree/main/plugins/ui-design/skills/interaction-design",
+      "filesPath": "skills/interaction-design/"
     },
     {
       "id": "design-system-patterns",
@@ -948,10 +991,10 @@
       "example": "به‌جای هاردکد کردن رنگ در کامپوننت، توکن semantic مثل text-primary می‌سازد و تم تاریک را با همان توکن‌ها وصل می‌کند.",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/design-system-patterns",
-      "filesPath": "skills/design-system-patterns/",
-      "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceName": "wshobson/agents",
+      "sourceUrl": "https://github.com/wshobson/agents/tree/main/plugins/ui-design/skills/design-system-patterns",
+      "sourceRepo": "https://github.com/wshobson/agents/tree/main/plugins/ui-design/skills/design-system-patterns",
+      "filesPath": "skills/design-system-patterns/"
     },
     {
       "id": "web-interface-guidelines",
@@ -980,10 +1023,10 @@
       "example": "دکمهٔ ارسال تا شروع درخواست فعال می‌ماند، بعد اسپینر می‌گیرد و لیبلش حفظ می‌شود؛ خطای فرم کنار فیلد نشان داده می‌شود و فوکوس روی اولین خطا می‌رود.",
       "featured": false,
       "source": "farsiui",
-      "sourceUrl": "https://farsiui.ir/skills/web-interface-guidelines",
-      "filesPath": "skills/web-interface-guidelines/",
-      "sourceName": "FarsiUI",
-      "sourceRepo": "https://github.com/MiladJoodi/FarsiUI"
+      "sourceName": "Vercel Labs",
+      "sourceUrl": "https://github.com/vercel-labs/web-interface-guidelines",
+      "sourceRepo": "https://github.com/vercel-labs/web-interface-guidelines",
+      "filesPath": "skills/web-interface-guidelines/"
     }
   ]
 }
