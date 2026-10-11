@@ -1,0 +1,14 @@
+@media (max-width: 640px) {
+
+  .skill-slug {
+    display: none;
+  }
+
+  .catalog-home {
+    padding-top: 1.5rem;
+  }
+
+  .drawer-panel {
+    width: 100%;
+  }
+}
