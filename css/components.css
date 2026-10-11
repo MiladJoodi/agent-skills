@@ -717,11 +717,11 @@ a.source-verified:hover {
   min-height: 2.7rem;
   margin-bottom: 1.5rem;
   border-radius: 999px;
-  color: #fff;
+  color: #141414;
 }
 
 .btn-download:hover {
-  color: #fff;
+  color: #141414;
 }
 
 .install-steps {
