@@ -224,25 +224,37 @@
     );
   }
 
-  function triggerBlobDownload(content, filename) {
-    var blob = new Blob([content], { type: "text/markdown;charset=utf-8" });
+  function triggerBlobDownload(content, filename, mimeType) {
+    var blob =
+      content instanceof Blob
+        ? content
+        : new Blob([content], {
+            type: mimeType || "application/octet-stream",
+          });
     var url = URL.createObjectURL(blob);
     var anchor = document.createElement("a");
     anchor.href = url;
     anchor.download = filename;
+    anchor.rel = "noopener";
     document.body.appendChild(anchor);
     anchor.click();
     anchor.remove();
-    URL.revokeObjectURL(url);
+    window.setTimeout(function () {
+      URL.revokeObjectURL(url);
+    }, 1000);
   }
 
-  function downloadViaLink(href, filename) {
-    var anchor = document.createElement("a");
-    anchor.href = href;
-    anchor.download = filename || "SKILL.md";
-    document.body.appendChild(anchor);
-    anchor.click();
-    anchor.remove();
+  function fetchAsBlob(href) {
+    var isHttp =
+      window.location.protocol === "http:" || window.location.protocol === "https:";
+    if (!isHttp) {
+      return Promise.reject(new Error("not http"));
+    }
+    return fetch(href)
+      .then(function (response) {
+        if (!response.ok) throw new Error("HTTP " + response.status);
+        return response.blob();
+      });
   }
 
   function loadSkillMarkdown(skill) {
@@ -269,23 +281,26 @@
   function downloadSkill(skill) {
     var slug = skill.slug || skill.id;
     var bundleHref = skillBundleHref(skill);
+    var bundleName = skill.bundle || slug + ".zip";
 
     if (bundleHref) {
-      downloadViaLink(bundleHref, skill.bundle || slug + ".zip");
-      return;
-    }
-
-    var href = skillMdHref(slug);
-    var isHttp =
-      window.location.protocol === "http:" || window.location.protocol === "https:";
-
-    if (!isHttp) {
-      downloadViaLink(href, "SKILL.md");
+      fetchAsBlob(bundleHref)
+        .then(function (blob) {
+          triggerBlobDownload(blob, bundleName, "application/zip");
+        })
+        .catch(function () {
+          var anchor = document.createElement("a");
+          anchor.href = bundleHref;
+          anchor.download = bundleName;
+          document.body.appendChild(anchor);
+          anchor.click();
+          anchor.remove();
+        });
       return;
     }
 
     loadSkillMarkdown(skill).then(function (text) {
-      triggerBlobDownload(text, "SKILL.md");
+      triggerBlobDownload(text, "SKILL.md", "text/markdown;charset=utf-8");
     });
   }
 
