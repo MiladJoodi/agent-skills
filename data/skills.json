@@ -61,7 +61,7 @@
         "محاوره",
         "شبکه‌های اجتماعی"
       ],
-      "summary": "Write natural colloquial Persian (محاوره‌نویسی) as Persian speakers actually write in chats, social media, consumer products, onboarding, notifications, and friendly support.",
+      "summary": "Write natural colloquial Persian for chats, social captions, onboarding, notifications, and friendly support—not formal or legal copy.",
       "description": "Write natural colloquial Persian (محاوره‌نویسی) as Persian speakers actually write in chats, social media, consumer products, onboarding, notifications, and friendly support. Use when the user asks for فارسی محاوره‌ای، خودمونی، عامیانه، لحن دوستانه، کپشن، استوری، پیام چت, or casual Persian product copy. Do not use for legal, academic, administrative, contractual, or explicitly formal writing; use persian-formal or persian-writing when appropriate.",
       "whenToUse": "کپشن اینستاگرام و شبکه‌های اجتماعی · پیام خوش‌آمد وقتی کسی اپ را باز می‌کند · جواب پشتیبانی و چت با کاربر · اعلان کوتاه داخل اپ",
       "useCases": [
@@ -91,7 +91,7 @@
         "رسمی",
         "اداری"
       ],
-      "summary": "Write formal Persian that still sounds human: proposals, contracts, invoices, official letters (نامه اداری), formal email, company website copy, terms and policies.",
+      "summary": "Write formal Persian that still sounds human: proposals, contracts, invoices, official letters, email, and policy pages.",
       "description": "Write formal Persian that still sounds human: proposals, contracts, invoices, official letters (نامه اداری), formal email, company website copy, terms and policies. Use whenever the user asks for فارسی رسمی، اداری، نامه، پروپوزال، قرارداد، فاکتور، متن حقوقی, or when the text goes to a client, organization, university or government office. Bans the bureaucratic tells (می‌باشد، لازم به ذکر است) that make Persian sound machine-written.",
       "whenToUse": "نامه به سازمان یا دانشگاه · ایمیل رسمی به مشتری یا همکار · پروپوزال و قرارداد · صفحهٔ دربارهٔ ما و متن سایت شرکت",
       "useCases": [
@@ -121,7 +121,7 @@
         "UI",
         "محصول"
       ],
-      "summary": "Write natural Persian (Farsi) UI microcopy for buttons, labels, placeholders, validation and error messages, empty states, loading, success messages, confirmations and notifications.",
+      "summary": "Write natural Persian UI microcopy for buttons, labels, errors, empty states, loading, success, and confirmations.",
       "description": "Write natural Persian (Farsi) UI microcopy for buttons, labels, placeholders, validation and error messages, empty states, loading, success messages, confirmations and notifications. Use when creating, rewriting or translating user-facing text for Persian and Iranian products. Prefer natural product language over literal translation. Includes an English-to-Persian UI glossary for consistent terminology.",
       "whenToUse": "متن دکمه و منو · برچسب و راهنمای داخل فرم · پیام خطا و موفقیت · وقتی صفحه خالی است چه بنویسیم",
       "useCases": [
@@ -151,7 +151,7 @@
         "UI",
         "React"
       ],
-      "summary": "Build natural Persian RTL interfaces with React and Tailwind.",
+      "summary": "Build Persian RTL interfaces with React and Tailwind—logical CSS, forms, dashboards, and LTR-to-RTL conversion.",
       "description": "Build natural Persian RTL interfaces with React and Tailwind. Use for Persian UI, RTL layouts, component styling, forms, dashboards and converting LTR interfaces to RTL. Covers logical CSS, Persian typography, Persian numbers, Jalali dates, Iranian form patterns, accessible RTL behavior and token-based styling.",
       "whenToUse": "ساخت صفحه یا داشبورد فارسی · تبدیل یک رابط انگلیسی به راست‌چین · فرم با موبایل، کد ملی یا شبا · قیمت به تومان و تاریخ شمسی",
       "useCases": [
@@ -181,7 +181,7 @@
         "شمسی",
         "Jalali"
       ],
-      "summary": "Handle dates and times for Iranian users: the Jalali / Solar Hijri calendar (تقویم شمسی، هجری خورشیدی), Saturday-first weeks, Tehran time (Asia/Tehran, UTC+03:30, no DST), Persian month and weekday names, formatting,…",
+      "summary": "Handle Jalali (Solar Hijri) dates and Tehran time for Iranian products: formatting, storage, ranges, and holidays.",
       "description": "Handle dates and times for Iranian users: the Jalali / Solar Hijri calendar (تقویم شمسی، هجری خورشیدی), Saturday-first weeks, Tehran time (Asia/Tehran, UTC+03:30, no DST), Persian month and weekday names, formatting, storage, conversion, date ranges, reports, age calculations and holidays. Use whenever a date, time, calendar, date picker, deadline, booking, report period, age or holiday appears in a Persian (Farsi) product, or the user says تاریخ شمسی، تقویم فارسی، jalali، شنبه، نوروز.",
       "whenToUse": "انتخاب تاریخ تولد · تاریخ روی فاکتور و سفارش · مهلت و سررسید کار · گزارش با بازهٔ زمانی",
       "useCases": [
@@ -211,7 +211,7 @@
         "فرم",
         "ایران"
       ],
-      "summary": "Validate and format Iranian identifiers correctly: national ID (کد ملی) checksum, legal entity ID (شناسه ملی), mobile numbers (۰۹…), landlines with area codes, IBAN / Sheba (شبا) mod-97, bank card numbers with Luhn an…",
+      "summary": "Validate and format Iranian IDs, mobile/landline numbers, Sheba, cards, postal codes, and plates.",
       "description": "Validate and format Iranian identifiers correctly: national ID (کد ملی) checksum, legal entity ID (شناسه ملی), mobile numbers (۰۹…), landlines with area codes, IBAN / Sheba (شبا) mod-97, bank card numbers with Luhn and BIN lookup, postal code (کد پستی), vehicle plates (پلاک), and Persian/Arabic digit normalization. Use for signup, KYC, checkout, address, payment, profile, contact, or identity forms in Iranian products, or whenever the user mentions اعتبارسنجی، کد ملی، شناسه ملی، شبا، شماره کارت، شماره موبایل، تلفن ثابت، کد پستی، پلاک. Replaces US-style patterns such as SSN, ZIP codes, and US phone numbers with Iranian-specific formats and validation rules.",
       "whenToUse": "فرم ثبت‌نام · پرداخت و اطلاعات بانکی · آدرس و کد پستی · پروفایل کاربر",
       "useCases": [
@@ -241,7 +241,7 @@
         "متادیتا",
         "محتوا"
       ],
-      "summary": "Technical and on-page SEO for Persian (Farsi) websites: document language, RTL direction, fa-IR metadata, hreflang, Persian titles and descriptions, stable slug and URL strategy, ZWNJ and Persian/Arabic character norm…",
+      "summary": "Technical and on-page SEO for Persian sites: fa-IR metadata, RTL, slugs, Open Graph, JSON-LD, and content structure.",
       "description": "Technical and on-page SEO for Persian (Farsi) websites: document language, RTL direction, fa-IR metadata, hreflang, Persian titles and descriptions, stable slug and URL strategy, ZWNJ and Persian/Arabic character normalization, Open Graph, JSON-LD, canonical URLs, sitemaps, robots, internal linking, Persian keyword variants, Persian content structure, fonts, accessibility, and Core Web Vitals. Use when writing metadata, structured data, Persian blog content, product pages, landing pages, or URL structures for an Iranian or Persian-language site, or when the user mentions سئو، سئوی فارسی، متادیتا، عنوان صفحه، توضیحات، اسلاگ، URL، JSON-LD، hreflang، گوگل. Examples target Next.js, but the rules are framework-independent.",
       "whenToUse": "نوشتن عنوان و توضیحات مناسب برای صفحات · بهینه‌سازی صفحات محصول و مقاله · تنظیم پیش‌نمایش لینک در شبکه‌های اجتماعی · رعایت نکات سئو در سایت‌های فارسی و دوزبانه",
       "useCases": [
@@ -272,7 +272,7 @@
         "structured data",
         "متادیتا"
       ],
-      "summary": "Optimize for search engine visibility and ranking.",
+      "summary": "Improve search visibility with technical SEO, meta tags, structured data, sitemaps, and crawlability fixes.",
       "description": "Optimize for search engine visibility and ranking. Use when asked to improve SEO, optimize for search, fix meta tags, add structured data, sitemap optimization, or search engine optimization. Covers technical SEO, on-page optimization, crawlability, and JSON-LD based on Lighthouse SEO audits and Google Search guidelines.",
       "whenToUse": "بررسی عنوان و توضیحات صفحات · بررسی داده‌های ساختاریافته · بررسی فایل‌های robots.txt و sitemap.xml · بررسی آدرس اصلی صفحه (canonical) · بررسی مشکلات فنی سئو با ابزارهای مناسب",
       "useCases": [
@@ -305,7 +305,7 @@
         "سئو",
         "پرفورمنس"
       ],
-      "summary": "Run an evidence-led web quality audit covering performance, accessibility, SEO, best practices, and agentic browsing.",
+      "summary": "Run an evidence-led web quality audit across performance, accessibility, SEO, and best practices.",
       "description": "Run an evidence-led web quality audit covering performance, accessibility, SEO, best practices, and agentic browsing. Use when asked to audit a site, review web quality, run a Lighthouse audit, check page quality, or optimize a website. Combines live browser evidence with source inspection; does not treat an aggregate score as proof of quality.",
       "whenToUse": "بررسی کامل سایت یا یک صفحه · اجرای Lighthouse و بررسی نتایج · پیدا کردن مشکلات مؤثر بر تجربه کاربر · بررسی سایت پیش از انتشار یا پس از تغییرات",
       "useCases": [
@@ -340,7 +340,7 @@
         "شبکه اجتماعی",
         "متادیتا"
       ],
-      "summary": "Implement and debug Open Graph / Twitter (X) / Telegram / WhatsApp / LinkedIn / Discord / Facebook link previews.",
+      "summary": "Implement and debug link previews for Open Graph, Twitter/X, Telegram, WhatsApp, LinkedIn, and Discord.",
       "description": "Implement and debug Open Graph / Twitter (X) / Telegram / WhatsApp / LinkedIn / Discord / Facebook link previews. Use when adding social share metadata, or when og:image is missing, broken (500), cropped, cached wrong on X, or Persian text breaks in dynamic OG images on a Next.js (or any) site. Decide from evidence; do not blindly run checklists.",
       "whenToUse": "وقتی لینک بدون تصویر یا با اطلاعات اشتباه نمایش داده می‌شود · تنظیم og:image و twitter:card در Next.js · استفاده از تصویر ثابت یا opengraph-image داینامیک · پیدا کردن خطاهای ۵۰۰، Content-Type اشتباه یا کش قدیمی X · بررسی جداشدن حروف فارسی در تصویر ساخته‌شده با ImageResponse",
       "useCases": [
@@ -376,7 +376,7 @@
         "OTP",
         "payment"
       ],
-      "summary": "Secure-by-default guidance for React and Next.js App Router: XSS, CSP nonces, cookies/CSRF, uploads, third-party scripts, payment verify, and OTP/SMS login.",
+      "summary": "Secure-by-default React/Next.js guidance: XSS, CSP, cookies/CSRF, uploads, payment verify, and OTP login.",
       "description": "Secure-by-default guidance for writing, reviewing, and fixing frontend code in React and Next.js (App Router)—XSS and unsafe HTML, CSP with nonces, security headers, CORS, cookies and token storage, CSRF, Server Actions, uploads, payment verification, and OTP/SMS login. Use for security reviews or when building auth, payments, or user-generated content.",
       "whenToUse": "Security review of frontend code · XSS / dangerouslySetInnerHTML · CSP and security headers · Cookies, CSRF, and token storage · Payment callbacks and OTP login",
       "useCases": [
@@ -390,10 +390,10 @@
       "installCommand": "",
       "example": "Marks a Zarinpal order paid only after server-side verify and amount match—not from Status=OK query params.",
       "featured": true,
-      "source": "local",
-      "sourceName": "agent-skills",
-      "sourceUrl": "https://github.com/MiladJoodi/agent-skills",
-      "sourceRepo": "https://github.com/MiladJoodi/agent-skills",
+      "source": "miladjoodi",
+      "sourceName": "Milad Joodi",
+      "sourceUrl": "https://github.com/MiladJoodi/skills/tree/main/skills/frontend-security",
+      "sourceRepo": "https://github.com/MiladJoodi/skills/tree/main/skills/frontend-security",
       "filesPath": "skills/frontend-security/",
       "bundle": "frontend-security.zip"
     },
@@ -408,7 +408,7 @@
         "Agent",
         "قوانین"
       ],
-      "summary": "Project-level Persian and RTL rules for coding agents.",
+      "summary": "Project-level Persian and RTL conventions for coding agents working on Farsi products.",
       "description": "Project-level Persian and RTL rules for coding agents. Use when a project targets Persian-speaking users in Iran and needs consistent Persian copy, RTL layout, Persian typography, Persian digits, Jalali dates, Iranian validation patterns, accessibility, and localized UI behavior without installing separate skills.",
       "whenToUse": "شروع پروژهٔ فارسی جدید · یک قانون مشترک برای Cursor، Claude و بقیه · وقتی می‌خواهید خروجی AI در طول پروژه یکدست بماند",
       "useCases": [
@@ -437,7 +437,7 @@
         "UI",
         "طراحی"
       ],
-      "summary": "Craft and quality rules for AI-built interfaces.",
+      "summary": "Craft and quality rules that keep AI-built interfaces consistent, usable, and polished.",
       "description": "Craft and quality rules for AI-built interfaces. Use when designing, implementing, reviewing, or refining UI to prevent arbitrary styling, inconsistent spacing, poor typography, layout shift, excessive motion, weak responsive behavior, and generic AI-generated visual patterns.",
       "whenToUse": "پروژه‌ای که بیشترش را با AI می‌سازید · چک کردن ظاهر قبل از تحویل · وقتی AI از خودش رنگ و سایه می‌ریزد",
       "useCases": [
@@ -466,7 +466,7 @@
         "UI",
         "فرانت‌اند"
       ],
-      "summary": "Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one.",
+      "summary": "Guidance for distinctive, intentional visual design when creating or reshaping a UI.",
       "description": "Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, layout, motion, and making choices that don't read as templated AI defaults. Use when designing landing pages, product UI, visual identity for a brief, or when generated interfaces look generic.",
       "whenToUse": "طراحی ظاهر یک صفحه یا محصول جدید · وقتی UI ساخته‌شده توسط AI زیادی شبیه نمونه‌های تکراری شده · مشخص‌کردن سبک و جهت بصری قبل از شروع کدنویسی · بررسی و بهترکردن ظاهر صفحه قبل از تحویل",
       "useCases": [
@@ -496,7 +496,7 @@
         "ابزار",
         "Agent"
       ],
-      "summary": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools.",
+      "summary": "Build high-quality MCP servers so LLMs can call external services through well-designed tools.",
       "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK), including tool design, auth, pagination, errors, and evaluations.",
       "whenToUse": "وصل کردن AI به یک API یا سرویس خارجی · ساخت ابزار برای خواندن، ایجاد یا تغییر اطلاعات · ساخت سرور MCP با TypeScript یا Python · تعریف درست ورودی و خروجی ابزارها · تست کردن ابزارها و مطمئن شدن از درست کار کردن آن‌ها",
       "useCases": [
@@ -527,7 +527,7 @@
         "جستجو",
         "CLI"
       ],
-      "summary": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities.",
+      "summary": "Help users discover and install agent skills when they ask how to do something or extend capabilities.",
       "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
       "whenToUse": "پیدا کردن مهارت مناسب برای یک کار مشخص · پیدا کردن مهارت برای تست، طراحی، دیپلوی و کارهای مشابه · نصب مهارت از GitHub · بررسی مهارت قبل از نصب",
       "useCases": [
@@ -557,7 +557,7 @@
         "Next.js",
         "پرفورمنس"
       ],
-      "summary": "React and Next.js performance optimization guidelines from Vercel Engineering.",
+      "summary": "Vercel Engineering rules for React and Next.js performance—waterfalls, bundles, rendering, and data fetching.",
       "description": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.",
       "whenToUse": "نوشتن یا بررسی کامپوننت‌های React و صفحات Next.js · بهتر کردن روش گرفتن داده از سرور و کلاینت · کم کردن حجم فایل‌هایی که مرورگر دانلود می‌کند · پیدا کردن دلیل کندی صفحه یا رندرهای اضافی · بررسی مشکلات مربوط به سرعت و عملکرد",
       "useCases": [
@@ -588,7 +588,7 @@
         "ریفکتور",
         "کدبیس"
       ],
-      "summary": "Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.",
+      "summary": "Scan a codebase for deepening opportunities, present a visual report, then grill the option you pick.",
       "description": "Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.",
       "whenToUse": "پیدا کردن بخش‌های شلوغ و پیچیده پروژه · ساده‌تر کردن ساختار و کدهای سخت‌فهم · آماده‌تر کردن کد برای تست و توسعه · بهتر کردن ساختار پروژه برای کار با AI · بازبینی دوره‌ای معماری پروژه",
       "useCases": [
@@ -619,7 +619,7 @@
         "تصمیم",
         "مصاحبه"
       ],
-      "summary": "A relentless interview to sharpen a plan or design.",
+      "summary": "A relentless interview that stress-tests a plan or design before you build it.",
       "description": "A relentless interview to sharpen a plan or design. Use when the user wants to stress-test their thinking, says \"grill me\", or asks to poke holes in a plan, decision, or idea.",
       "whenToUse": "بررسی دقیق یک ایده یا برنامه · وقتی هنوز دقیق نمی‌دانید چه می‌خواهید · قبل از شروع کدنویسی یک ایده · پیدا کردن مشکل‌های یک طرح قبل از اجرا",
       "useCases": [
@@ -649,7 +649,7 @@
         "تایپوگرافی",
         "فونت"
       ],
-      "summary": "Persian typography guidance for coding agents and developers.",
+      "summary": "Persian typography for product UI: fonts, digits, ZWNJ, line length, and readable Farsi text.",
       "description": "Persian typography guidance for coding agents and developers. Use when choosing or loading Persian fonts, styling Persian interfaces, handling Persian digits, mixed Persian and Latin text, ZWNJ, line height, tables, prices, and typography-related RTL issues.",
       "whenToUse": "انتخاب فونت برای سایت فارسی · تیتر و متن بدنه · جدول قیمت و عدد · متن مخلوط فارسی و انگلیسی",
       "useCases": [
@@ -679,7 +679,7 @@
         "آپلود",
         "S3"
       ],
-      "summary": "Upload images to ParsPack S3-compatible object storage from a Next.js App Router application.",
+      "summary": "Upload images to ParsPack S3-compatible storage from a Next.js App Router app.",
       "description": "Upload images to ParsPack S3-compatible object storage from a Next.js App Router application. Use when implementing server-side image uploads, S3 client configuration, public or presigned object URLs, upload validation, authenticated API routes, or ParsPack-specific path-style addressing.",
       "whenToUse": "عکس پروفایل کاربر · تصویر محصول فروشگاه · گالری یا آپلود فایل در پنل",
       "useCases": [
@@ -708,7 +708,7 @@
         "پرداخت",
         "زرین‌پال"
       ],
-      "summary": "Integrate the Zarinpal payment gateway into Next.js or Node.js applications.",
+      "summary": "Integrate Zarinpal payments in Next.js or Node—request, callback, and server-side verify.",
       "description": "Integrate the Zarinpal payment gateway into Next.js or Node.js applications. Use when implementing payment requests, authority handling, callbacks, verification, billing records, Toman-to-Rial conversion, sandbox testing, idempotency, or secure payment flows for Iranian products.",
       "whenToUse": "خرید محصول یا اشتراک · شارژ اعتبار داخل اپ · تست پرداخت قبل از رفتن روی حالت واقعی",
       "useCases": [
@@ -742,7 +742,7 @@
         "preview",
         "fouc"
       ],
-      "summary": "Build and debug multiple isolated design systems in a Next.js app: style-* body classes, cookie/localStorage sync, FOUC prevention, light/dark coexistence, SSR/hydration, iframe component previews, parent↔iframe theme…",
+      "summary": "Run multiple isolated design systems in one Next.js app with theme sync, FOUC prevention, and iframe previews.",
       "description": "Build and debug multiple isolated design systems in a Next.js app: style-* body classes, cookie/localStorage sync, FOUC prevention, light/dark coexistence, SSR/hydration, iframe component previews, parent↔iframe theme sync, and design tokens. Use when switching themes flashes wrong styles, iframe previews ignore the picker, or docs and preview disagree.",
       "whenToUse": "داشتن چند ظاهر در یک سایت یا مستندات · جلوگیری از نمایش لحظه‌ای ظاهر اشتباه هنگام باز شدن صفحه · هماهنگ کردن پیش‌نمایش کامپوننت با ظاهر انتخاب‌شده · هماهنگ ماندن حالت روشن و تاریک با هر Design System",
       "useCases": [
@@ -776,7 +776,7 @@
         "tooltip",
         "visualization"
       ],
-      "summary": "Build and debug RTL / Persian data visualizations with Recharts (or similar): Persian digits, fa-IR locale, axis and tooltip alignment, labels, formatting, responsive charts, and common RTL chart bugs.",
+      "summary": "Build RTL/Persian charts with Recharts-style stacks: digits, locale, axes, tooltips, and common RTL bugs.",
       "description": "Build and debug RTL / Persian data visualizations with Recharts (or similar): Persian digits, fa-IR locale, axis and tooltip alignment, labels, formatting, responsive charts, and common RTL chart bugs. Use when charts look LTR, numbers are Latin-only, tooltips misalign, or axes flip incorrectly under dir=rtl.",
       "whenToUse": "ساخت داشبوردهای فارسی · نمایش درست اعداد و نوشته‌های فارسی روی محورها · راست‌چین کردن Tooltip و Legend · رفع مشکل محور، فاصله‌ها یا تراز اشتباه در RTL",
       "useCases": [
@@ -811,7 +811,7 @@
         "cursor",
         "claude"
       ],
-      "summary": "Design, build, and consume a UI component registry with its install CLI: registry structure, item metadata, files, dependencies, local vs published registries, path resolution, versioning, and installs into .cursor /…",
+      "summary": "Design and consume a UI component registry plus install CLI for Cursor, Claude, and project paths.",
       "description": "Design, build, and consume a UI component registry with its install CLI: registry structure, item metadata, files, dependencies, local vs published registries, path resolution, versioning, and installs into .cursor / .claude / project paths. Use when adding components via CLI fails, registry JSON is wrong, or install paths/deps resolve incorrectly.",
       "whenToUse": "ساخت و انتشار Registry کامپوننت · نصب کامپوننت با CLI · رفع مشکل مسیر اشتباه فایل‌ها یا وابستگی‌های جاافتاده · مدیریت نسخه و به‌روزرسانی کامپوننت‌ها",
       "useCases": [
@@ -846,7 +846,7 @@
         "schema",
         "registry"
       ],
-      "summary": "Build and debug an MCP server tailored to a UI library / design system registry: tools, resources, prompts, empty schemas, component discovery, metadata, naming, branding, and Cursor/Claude/OpenCode compatibility.",
+      "summary": "Build an MCP server for a UI library registry—tools, resources, discovery, and editor compatibility.",
       "description": "Build and debug an MCP server tailored to a UI library / design system registry: tools, resources, prompts, empty schemas, component discovery, metadata, naming, branding, and Cursor/Claude/OpenCode compatibility. Use when agents cannot list or install components via MCP, schemas fail validation, or the MCP is too generic for a component registry. Not a general MCP tutorial — use mcp-builder for that.",
       "whenToUse": "جستجو و نصب کامپوننت از داخل Cursor یا Claude · رفع خطاهای ابزار یا نتیجه‌های خالی · هماهنگ کردن نام و ظاهر ابزارها با برند کتابخانه · نمایش نمونه و دستور نصب کامپوننت داخل AI",
       "useCases": [
@@ -878,7 +878,7 @@
         "layout",
         "grid"
       ],
-      "summary": "Implement modern responsive layouts using container queries, fluid typography, CSS Grid, and mobile-first breakpoint strategies.",
+      "summary": "Modern responsive layouts with container queries, fluid type, CSS Grid, and mobile-first breakpoints.",
       "description": "Implement modern responsive layouts using container queries, fluid typography, CSS Grid, and mobile-first breakpoint strategies. Use when building adaptive interfaces, implementing fluid layouts, or creating component-level responsive behavior.",
       "whenToUse": "طراحی Mobile-first · جلوگیری از به‌هم‌ریختن چیدمان در اندازه‌های مختلف · ساخت Grid و Layoutهای واکنش‌گرا · کنترل بهتر Typography و فاصله‌ها · سازگار کردن کامپوننت‌ها با موبایل و دسکتاپ",
       "useCases": [
@@ -911,7 +911,7 @@
         "aria",
         "keyboard"
       ],
-      "summary": "Implement WCAG 2.2 compliant interfaces with mobile accessibility, inclusive design patterns, and assistive technology support.",
+      "summary": "WCAG 2.2 interfaces with mobile accessibility, inclusive patterns, and assistive-tech support.",
       "description": "Implement WCAG 2.2 compliant interfaces with mobile accessibility, inclusive design patterns, and assistive technology support. Use when auditing accessibility, implementing ARIA patterns, building for screen readers, or ensuring inclusive user experiences.",
       "whenToUse": "رعایت اصول WCAG · پشتیبانی از Keyboard Navigation · مدیریت درست Focus · استفاده صحیح از ARIA · بررسی کنتراست و وضعیت‌های مختلف کامپوننت",
       "useCases": [
@@ -944,7 +944,7 @@
         "feedback",
         "motion"
       ],
-      "summary": "Design and implement microinteractions, motion design, transitions, and user feedback patterns.",
+      "summary": "Microinteractions, motion, transitions, and feedback patterns that make UI feel responsive.",
       "description": "Design and implement microinteractions, motion design, transitions, and user feedback patterns. Use when adding polish to UI interactions, implementing loading states, or creating deliberate user feedback.",
       "whenToUse": "طراحی حالت‌های مختلف کامپوننت · Loading و Feedback مناسب · Transition و Animationهای کنترل‌شده · طراحی Hover و Focus · مدیریت Empty، Error و Success State",
       "useCases": [
@@ -977,7 +977,7 @@
         "components",
         "css-variables"
       ],
-      "summary": "Build scalable design systems with design tokens, theming infrastructure, and component architecture patterns.",
+      "summary": "Scalable design systems with tokens, theming, and component architecture patterns.",
       "description": "Build scalable design systems with design tokens, theming infrastructure, and component architecture patterns. Use when creating design tokens, implementing theme switching, building component libraries, or establishing design system foundations.",
       "whenToUse": "ساخت Design Token برای رنگ، فاصله و تایپوگرافی · پیاده‌سازی تم روشن و تاریک · معماری کتابخانه کامپوننت با API یکدست · سلسله‌مراتب توکن‌های Primitive، Semantic و Component",
       "useCases": [
@@ -1009,7 +1009,7 @@
         "performance",
         "vercel"
       ],
-      "summary": "Concise rules for building accessible, fast, delightful web UIs.",
+      "summary": "Concise rules for accessible, fast, delightful web UIs—clarity over decoration.",
       "description": "Concise rules for building accessible, fast, delightful web UIs. Use when reviewing or implementing interfaces, forms, focus, animation, layout, performance, or dark mode — guided by MUST / SHOULD / NEVER decisions.",
       "whenToUse": "بازبینی کیفیت رابط کاربری قبل از تحویل · فرم، فوکوس و تعامل کیبورد · انیمیشن با احترام به prefers-reduced-motion · کاهش CLS و بهبود پرفورمنس UI",
       "useCases": [

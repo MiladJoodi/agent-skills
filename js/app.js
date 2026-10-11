@@ -410,18 +410,6 @@
       })
       .join("");
 
-    var contentSection = hasBundle
-      ? ""
-      : '<section class="drawer-section drawer-content-section">' +
-        '<div class="drawer-content-head">' +
-        "<h3>SKILL.md</h3>" +
-        '<button type="button" class="copy-icon-btn" id="drawer-copy-md" aria-label="Copy content" title="Copy">' +
-        COPY_ICON_SVG +
-        "</button>" +
-        "</div>" +
-        '<textarea class="skill-md-box" id="drawer-md-content" readonly spellcheck="false" aria-label="SKILL.md content">Loading…</textarea>' +
-        "</section>";
-
     drawerEls.body.innerHTML =
       '<p class="drawer-summary">' +
       escapeHtml(skill.summary || "") +
@@ -438,8 +426,7 @@
       tabsHtml +
       "</div>" +
       panelsHtml +
-      "</section>" +
-      contentSection;
+      "</section>";
 
     drawerEls.root.hidden = false;
     document.body.classList.add("drawer-open");
@@ -450,18 +437,6 @@
     document.getElementById("drawer-download").addEventListener("click", function () {
       downloadSkill(skill);
     });
-
-    if (!hasBundle) {
-      var mdBox = document.getElementById("drawer-md-content");
-      var mdContent = "";
-      loadSkillMarkdown(skill).then(function (text) {
-        mdContent = text;
-        if (mdBox) mdBox.value = text;
-      });
-      document.getElementById("drawer-copy-md").addEventListener("click", function (event) {
-        copyText(mdContent || (mdBox && mdBox.value) || "", event.currentTarget);
-      });
-    }
 
     drawerEls.body.querySelectorAll("[data-install-tab]").forEach(function (tab) {
       tab.addEventListener("click", function () {
@@ -538,6 +513,7 @@
     var root = document.getElementById("skills-grid");
     var empty = document.getElementById("empty-state");
     var meta = document.getElementById("results-meta");
+    var collapseBtn = document.getElementById("collapse-all");
     var searchInput = document.getElementById("search-input");
     if (!root || !searchInput) return;
 
@@ -545,6 +521,36 @@
     catalog.categories.forEach(function (category) {
       openState[category.id] = false;
     });
+
+    function anyOpen() {
+      return Object.keys(openState).some(function (id) {
+        return openState[id] === true;
+      });
+    }
+
+    function syncCollapseBtn() {
+      if (!collapseBtn) return;
+      var active = anyOpen();
+      collapseBtn.hidden = false;
+      collapseBtn.classList.toggle("is-active", active);
+      collapseBtn.disabled = !active;
+      collapseBtn.setAttribute(
+        "aria-label",
+        active ? "Collapse all categories" : "No open categories"
+      );
+    }
+
+    function collapseAll() {
+      Object.keys(openState).forEach(function (id) {
+        openState[id] = false;
+      });
+      root.querySelectorAll(".tree-group.is-open").forEach(function (group) {
+        group.classList.remove("is-open");
+        var toggle = group.querySelector(".tree-group-toggle");
+        if (toggle) toggle.setAttribute("aria-expanded", "false");
+      });
+      syncCollapseBtn();
+    }
 
     function paint() {
       var filtered = filterSkills(catalog.skills, searchInput.value);
@@ -615,11 +621,11 @@
             group.skills.length +
             "</span>" +
             "</button>" +
-            '<ul class="tree-skills"' +
-            (open ? "" : " hidden") +
-            ">" +
+            '<div class="tree-skills-panel">' +
+            '<ul class="tree-skills">' +
             rows +
             "</ul>" +
+            "</div>" +
             "</li>"
           );
         })
@@ -632,6 +638,11 @@
             : filtered.length + " skills · " + groups.length + " categories";
       }
       if (empty) empty.hidden = filtered.length > 0;
+      syncCollapseBtn();
+    }
+
+    if (collapseBtn) {
+      collapseBtn.addEventListener("click", collapseAll);
     }
 
     root.addEventListener("click", function (event) {
@@ -643,8 +654,7 @@
         openState[id] = next;
         group.classList.toggle("is-open", next);
         toggle.setAttribute("aria-expanded", String(next));
-        var list = group.querySelector(".tree-skills");
-        if (list) list.hidden = !next;
+        syncCollapseBtn();
         return;
       }
 

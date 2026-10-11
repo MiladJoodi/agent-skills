@@ -1,25 +1,13 @@
 .theme-toggle {
-  width: 2.6rem;
-  height: 2.6rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--bg-elevated);
-  color: var(--accent);
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
-}
-
-.theme-toggle:hover {
-  border-color: color-mix(in srgb, var(--accent) 50%, var(--line));
-  color: var(--accent-ink);
+  min-width: 2.25rem;
+  padding: 0;
+  color: var(--ink-muted);
 }
 
 .theme-toggle-icons {
   position: relative;
-  width: 1.375rem;
-  height: 1.375rem;
+  width: 1.125rem;
+  height: 1.125rem;
   display: grid;
   place-items: center;
 }
@@ -27,8 +15,8 @@
 .theme-icon {
   grid-area: 1 / 1;
   display: block;
-  width: 1.375rem;
-  height: 1.375rem;
+  width: 1.125rem;
+  height: 1.125rem;
   transition: opacity 0.28s ease, transform 0.35s cubic-bezier(0.34, 1.4, 0.64, 1);
 }
 
@@ -153,25 +141,83 @@ html[data-theme="dark"] .theme-icon-moon {
 }
 
 .catalog-home {
-  padding: 2rem 0 3.5rem;
+  padding: 2rem 0 12rem;
 }
 
 .catalog-home .section-head h1 {
-  margin: 0 0 0.35rem;
-  font-size: clamp(1.65rem, 3vw, 2rem);
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.85rem, 3.4vw, 2.35rem);
   font-weight: 700;
   letter-spacing: -0.03em;
-  line-height: 1.2;
+  line-height: 1.15;
+}
+
+.catalog-home .section-head .section-kicker {
+  margin-bottom: 0.65rem;
 }
 
 .catalog-home .section-head h1 .accent {
   color: var(--accent);
 }
 
-.results-meta {
+.results-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
   margin: 0 0 0.75rem;
+  min-height: 1.5rem;
+}
+
+.results-meta {
+  margin: 0;
   color: var(--ink-muted);
   font-size: 0.84rem;
+}
+
+.collapse-all-btn {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.85rem;
+  height: 1.85rem;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 0.45rem;
+  background: transparent;
+  color: var(--ink-muted);
+  cursor: pointer;
+  opacity: 0.35;
+  transition:
+    opacity 0.22s ease,
+    color 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease;
+}
+
+.collapse-all-btn[hidden] {
+  display: none;
+}
+
+.collapse-all-btn.is-active {
+  opacity: 1;
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--line));
+  background: color-mix(in srgb, var(--accent-soft) 55%, transparent);
+}
+
+.collapse-all-btn.is-active:hover {
+  color: var(--accent-ink);
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+}
+
+.collapse-all-btn:not(.is-active) {
+  pointer-events: none;
+}
+
+.collapse-all-btn svg {
+  display: block;
 }
 
 .skills-tree {
@@ -214,7 +260,7 @@ html[data-theme="dark"] .theme-icon-moon {
   border-right: 1.5px solid var(--ink-muted);
   border-bottom: 1.5px solid var(--ink-muted);
   transform: rotate(-45deg);
-  transition: transform 0.18s ease;
+  transition: transform 0.28s ease;
   flex-shrink: 0;
 }
 
@@ -227,20 +273,44 @@ html[data-theme="dark"] .theme-icon-moon {
 }
 
 .tree-group-count {
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--accent-ink);
-  background: var(--accent-soft);
-  border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--line));
-  border-radius: 999px;
-  padding: 0.15rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--ink-muted);
+  opacity: 0.65;
+  font-variant-numeric: tabular-nums;
+}
+
+.tree-skills-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.32s ease;
+}
+
+.tree-group.is-open > .tree-skills-panel {
+  grid-template-rows: 1fr;
+}
+
+.tree-skills-panel > .tree-skills {
+  overflow: hidden;
+  min-height: 0;
 }
 
 .tree-skills {
   list-style: none;
   margin: 0;
+  padding: 0;
+  border-top: 1px solid transparent;
+  opacity: 0;
+  transition:
+    opacity 0.22s ease,
+    border-color 0.32s ease,
+    padding 0.32s ease;
+}
+
+.tree-group.is-open > .tree-skills-panel > .tree-skills {
   padding: 0 0 0.35rem;
-  border-top: 1px solid var(--line);
+  border-top-color: var(--line);
+  opacity: 1;
 }
 
 .tree-skill {
@@ -471,6 +541,7 @@ a.source-verified:hover {
   margin: 0 0 1rem;
   color: var(--ink-muted);
   font-size: 0.92rem;
+  line-height: 1.5;
 }
 
 .drawer-section {
@@ -579,107 +650,6 @@ a.source-verified:hover {
   display: block;
 }
 
-.drawer-content-section {
-  margin-top: 1.5rem;
-}
-
-.drawer-content-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  margin-bottom: 0.45rem;
-}
-
-.drawer-content-head h3 {
-  margin: 0;
-}
-
-.drawer-content-head .copy-icon-btn {
-  width: 2rem;
-  height: 2rem;
-}
-
-.file-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.15rem 0.7rem;
-  margin-bottom: 0.55rem;
-  border-bottom: 1px solid var(--line);
-}
-
-.file-tab {
-  margin: 0 0 -1px;
-  padding: 0.3rem 0;
-  border: 0;
-  border-bottom: 1.5px solid transparent;
-  background: transparent;
-  color: var(--ink-muted);
-  font: inherit;
-  font-size: 0.74rem;
-  font-weight: 500;
-  cursor: pointer;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.file-tab:hover {
-  color: var(--ink);
-}
-
-.file-tab.is-active {
-  color: var(--ink);
-  border-bottom-color: var(--accent);
-}
-
-.skill-md-box {
-  display: block;
-  width: 100%;
-  min-height: 14rem;
-  max-height: 22rem;
-  margin: 0;
-  padding: 0.75rem 0.85rem;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: transparent;
-  color: var(--ink-muted);
-  font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
-  font-size: 0.74rem;
-  line-height: 1.45;
-  resize: vertical;
-  overflow: auto;
-  white-space: pre;
-  tab-size: 2;
-  scrollbar-width: thin;
-  scrollbar-color: color-mix(in srgb, var(--ink-muted) 25%, transparent) transparent;
-}
-
-.skill-md-box:focus {
-  outline: none;
-  border-color: var(--line);
-  box-shadow: none;
-}
-
-.skill-md-box::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-.skill-md-box::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.skill-md-box::-webkit-scrollbar-thumb {
-  background: color-mix(in srgb, var(--ink-muted) 22%, transparent);
-  border-radius: 999px;
-}
-
-.skill-md-box::-webkit-scrollbar-thumb:hover {
-  background: color-mix(in srgb, var(--ink-muted) 35%, transparent);
-}
-
 .skill-slug-line {
   margin: 0 0 0.4rem;
   font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
@@ -747,6 +717,11 @@ a.source-verified:hover {
   min-height: 2.7rem;
   margin-bottom: 1.5rem;
   border-radius: 999px;
+  color: #fff;
+}
+
+.btn-download:hover {
+  color: #fff;
 }
 
 .install-steps {
