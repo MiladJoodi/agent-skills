@@ -2,8 +2,6 @@
 
 Personal collection of agent skills I use. Browse, open a skill, download or copy `SKILL.md`.
 
-**Site:** https://miladjoodi.github.io/agent-skills/
-
 ## Run
 
 ```bash
