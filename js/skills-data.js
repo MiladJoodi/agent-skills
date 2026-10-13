@@ -755,6 +755,40 @@ window.SKILLS_CATALOG = {
       "filesPath": "skills/zarinpal-payment/"
     },
     {
+      "id": "neshan-maps",
+      "name": "Neshan Maps",
+      "nameFa": "نقشه و مسیریابی نشان",
+      "slug": "neshan-maps",
+      "category": "persian-product",
+      "tags": [
+        "نشان",
+        "نقشه",
+        "مسیریابی",
+        "API",
+        "ژئوکدینگ",
+        "MapLibre"
+      ],
+      "summary": "Integrate Neshan Iranian maps APIs and SDKs: routing, geocoding, search, static maps, and MapLibre/web/mobile.",
+      "description": "Complete guide to the Neshan Maps Platform (platform.neshan.org): REST APIs (routing with live traffic, TSP, distance matrix, isochrone, map matching, search, geocoding, reverse geocoding, nearby, POI, region, static map) and SDKs (web MapLibre/Leaflet/OpenLayers, React, Vue, Android, iOS). Use when building Iran maps, مسیریابی، ترافیک، ژئوکدینگ، or place search with api.neshan.org / @neshan-maps-platform.",
+      "whenToUse": "مسیریابی با ترافیک زنده · جستجو و ژئوکدینگ آدرس · نقشه تعاملی MapLibre در وب · نقشه استاتیک یا ماتریس فاصله",
+      "useCases": [
+        "مسیریابی با ترافیک زنده",
+        "جستجو و ژئوکدینگ آدرس",
+        "نقشه تعاملی MapLibre در وب",
+        "نقشه استاتیک یا ماتریس فاصله"
+      ],
+      "installPath": ".cursor/skills/neshan-maps/SKILL.md",
+      "installCommand": "",
+      "example": "Routes with live traffic via GET /v4/direction and Api-Key header—lat,lng in requests, [lng,lat] in MapLibre.",
+      "featured": true,
+      "source": "miladjoodi",
+      "sourceName": "Milad Joodi",
+      "sourceUrl": "https://github.com/MiladJoodi/skills/tree/main/skills/neshan-maps",
+      "sourceRepo": "https://github.com/MiladJoodi/skills/tree/main/skills/neshan-maps",
+      "filesPath": "skills/neshan-maps/",
+      "bundle": "neshan-maps.zip"
+    },
+    {
       "id": "nextjs-multi-design-system",
       "name": "Multi Design System",
       "nameFa": "چند Design System در Next.js",
